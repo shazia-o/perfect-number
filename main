@@ -1,0 +1,26 @@
+public class PerfectNumber {
+//This is a program that determines if a number is a perfect number... 
+//...(a positive integer that's equal to the sum of its proper positive divisors)
+    
+    public static boolean isPerfectNumber (int number) {
+        
+        if (number < 1) {  //validation check
+            return false;
+        } 
+        
+        int sum = 0;  //we will b adding divisors to this using our loop
+        
+        for (int a = 1; a < number; a++) {  //Loop calculates the divisors
+            if (number % a == 0) {
+                sum += a;
+            }
+        } 
+        
+        if (sum == number) {  
+            return true;
+        } return false;
+        //this is where we check to see if number is a perfect number... 
+        //... where sum is equal to number
+    } 
+    
+}
